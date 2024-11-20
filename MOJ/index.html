@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-right">
+                <button class="hamburger-menu">
+                    <img src="assets/images/icon-menu.svg" alt="icon-menu">
+                </button>
+                <a class="logo" href="index.html">
+                    <img src="assets/images/logo.svg" alt="logo">
+                </a>
+                <form class="search" action="####">
+                    <input type="text" placeholder="بحث" name="search">
+                    <button type="submit"><img src="assets/images/search.svg" alt="search-icon"></button>
+                </form>
+            </div>
+            <div class="nav-left">
+                <div class="links">
+                    <a href="#" class="icon-text">
+                        <img src="assets/images/space-Icon.svg" alt="space-icon">
+                        <span>مساحتي</span>
+                    </a>
+                    <a href="#" class="icon-text">
+                        <img src="assets/images/star-icon.svg" alt="star-icon">
+                        <span>المفضلة</span>
+                    </a>
+                    <a href="#" class="icon-text">
+                        <img src="assets/images/doc-icon.svg" alt="doc-icon">
+                        <span>المسودات</span>
+                    </a>
+                </div>
+                <div class="user-tools">
+                    <div class="language-switcher">
+                        <button id="lang-btn" onclick="switchLanguage()">
+                            <span class="lang-text">ENGLISH</span>
+                            <img src="assets/images/lang-icon.svg" alt="language-switcher">
+                        </button>
+                    </div>
+                    <div class="notification-icon">
+                        <img src="assets/images/notification-icon.svg" alt="Notifications">
+                        <span class="notification-counter">3</span>
+                    </div>
+                    <div class="date">
+                        <div class="day-number">
+                            <p>23</p>
+                        </div>
+                        <div class="month-day">
+                            <p class="month">Du Alhijah</p>
+                            <p class="day">Monday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/home-icon.svg" alt="Image">
+                                <span class="tooltip">الرئيسية</span>
+                                <p>الرئيسية</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/tech-icon.svg" alt="Image">
+                                <span class="tooltip">خدمات تقنية</span>
+                                <p>خدمات تقنية</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/ask-icon.svg" alt="Image">
+                                <span class="tooltip">خدمات الإستعلام</span>
+                                <p>خدمات الإستعلام</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/employee-icon.svg" alt="Image">
+                                <span class="tooltip">خدمات الموظفين</span>
+                                <p>خدمات الموظفين</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/search-center-icon.svg" alt="Image">
+                                <span class="tooltip">مركز المعرفة</span>
+                                <p>مركز المعرفة</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/about-m-icon.svg" alt="Image">
+                                <span class="tooltip">عن الوزارة</span>
+                                <p>عن الوزارة</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-info">
+                    <div class="items">
+                        <div class="item">
+                            <a href="#">
+                                <div class="img-text">
+                                    <img src="assets/images/ejaza.svg" alt="Image">
+                                    <p>رصيد إجازاتي</p>
+                                </div>
+                                <div class="time">
+                                    <p>22</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img-text">
+                                    <img src="assets/images/waket.svg" alt="Image">
+                                    <p>وقت الدخول</p>
+                                </div>
+                                <div class="time">
+                                    <p>08:00 am</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-weather">
+                    <div class="weather">
+                        <img src="assets/images/weather-icon.svg" alt="Image">
+                        <p>36&deg;</p>
+                    </div>
+                    <div class="day">
+                        <img src="assets/images/mosque-icon.svg" alt="Image">
+                        <p>العصر</p>
+                        <p class="time">04:00 pm</p>
+                    </div>
+                </div>
+                <div class="today-plan">
+                    <div class="title">
+                        <img src="assets/images/calendar-g.svg" alt="Image">
+                        <h3>لديك اليوم</h3>
+                    </div>
+                    <div class="calendar-to-do">
+                        <div class="date">
+                            <button type="button"><img src="assets/images/angle-Right.svg" alt="img"></button>
+                            <p><span> 12</span> مايو  </p>
+                            <button type="button"><img src="assets/images/angle-left.svg" alt="img"></button>
+                        </div>
+                        <div class="plans">
+                            <div class="plan">
+                                <a href="#">
+                                    <div class="text">
+                                        <p>اجتماع</p>
+                                        <p class="time">
+                                            10:00 am - 10:30 am
+                                        </p>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/angle-left.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="plan">
+                                <a href="#">
+                                    <div class="text">
+                                        <p>حفل تدشين</p>
+                                        <p class="time">
+                                            10:00 am - 10:30 am
+                                        </p>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/angle-left.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="plan">
+                                <a href="#">
+                                    <div class="text">
+                                        <p>اجتماع الاسبوع في نص نص نص نص</p>
+                                        <p class="time">
+                                            10:00 am - 10:30 am
+                                        </p>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/angle-left.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="help">
+                    <a href="#">
+                        <img src="assets/images/help.svg" alt="Image">
+                        <span class="tooltip">المساعدة</span>
+                        <p>المساعدة</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-nav">
+            <div class="welcome">
+                <p>مرحبا بك، <span class="user-name">معتصم</span></p>
+            </div>
+            <div class="main-user-tools">
+                <div class="buttons">
+                    <a href="#" class="new-request">طلب جديد</a>
+                    <a href="#" class="submit-report">تقديم بلاغ</a>
+                </div>
+                <button class="menu-profile"><img src="assets/images/menu-profile.svg" alt="menu-profile"></button>
+                <div class="user-profile">
+                    <div class="user-image">
+                        <img src="assets/images/user-image.jpeg" alt="user-image">
+                    </div>
+                    <p class="name">معتصم الصمادي</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+
+        <div class="page-body">
+            
+    
+            <div class="page-content">
+                <div class="right-side">
+                    <section class="banner">
+                        <img src="assets/images/banner.png" alt="image">
+                        <h2>وزير العدل: دعم سمو ولي العهد اللامحدود يضع على أفراد العدالة مسؤوليةً كبيرة لتحقيق التطلعات العدلية</h2>
+                        <p>رعى معالي وزير العدل الدكتور وليد بن محمد الصمعاني، اليوم، حفل تخريج 3000 متدرب ومتدربة من مركز التدريب العدلي، ضمن برنامج تأهيل المحامين للعام الدراسي 1445هـ.</p>
+                    </section>
+
+                    <section class="tabs-section">
+                        <div class="tabs">
+                            <div class="tab active" onclick="showTab(0)">
+                                <img src="assets/images/lab-icon.svg" alt="image">
+                                <span>خدمات المقترحة</span>
+                            </div>
+                            <div class="tab" onclick="showTab(1)">
+                                <img src="assets/images/star-dark-icon.svg" alt="image">
+                                <span>الخدمات المفضلة</span>
+                            </div>
+                            <div class="tab" onclick="showTab(2)">
+                                <img src="assets/images/fix-icon.svg" alt="image">
+                                <span>خدمات أستخدمت مؤخراً</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content active" id="tab-0">
+                            <div class="box">
+                                <div class="icon-title">
+                                    <img src="assets/images/tab1.svg" alt="Image">
+                                    <h3>الاجهزة والبرمجيات</h3>
+                                </div>
+                                <a href="#">طلب الخدمة</a>
+                            </div>
+                            <div class="box">
+                                <div class="icon-title">
+                                    <img src="assets/images/tab2.svg" alt="Image">
+                                    <h3>صيانة المباني</h3>
+                                </div>
+                                <a href="#">طلب الخدمة</a>
+                            </div>
+                            <div class="box">
+                                <div class="icon-title">
+                                    <img src="assets/images/tab3.svg" alt="Image">
+                                    <h3>بياناتي وصلاحياتي</h3>
+                                </div>
+                                <a href="#">طلب الخدمة</a>
+                            </div>
+                            <div class="box">
+                                <div class="icon-title">
+                                    <img src="assets/images/tab4.svg" alt="Image">
+                                    <h3>تصاريح الدخول على مواقف السيارات</h3>
+                                </div>
+                                <a href="#">طلب الخدمة</a>
+                            </div>
+                            <div class="box">
+                                <div class="icon-title">
+                                    <img src="assets/images/tab5.svg" alt="Image">
+                                    <h3>طلب استئذان</h3>
+                                </div>
+                                <a href="#">طلب الخدمة</a>
+                            </div>
+                            <div class="box more">
+                                <div class="icon-title">
+                                    <h3>عرض جميع الخدمات</h3>
+                                    <img src="assets/images/apps-icon.svg" alt="Image">
+                                </div>
+                                <a href="#">طلب الخدمة</a>
+                            </div>
+                            <!-- Repeat the box structure for 5 more boxes -->
+                        </div>
+
+                        <div class="tab-content" id="tab-1">
+                            <!-- Add 6 boxes for Tab 2 -->
+                        </div>
+
+                        <div class="tab-content" id="tab-2">
+                            <!-- Add 6 boxes for Tab 3 -->
+                        </div>
+                    </section>
+
+                    <section class="ministry-systems">
+                        <div class="title">
+                            <img src="assets/images/ministry-systems.svg" alt="Image">
+                            <h2>أنظمة الوزارة</h2>
+                        </div>
+                        <div class="systems">
+                            <div class="system">
+                                <img src="assets/images/sys-1.svg" alt="Image">
+                                <h3>أنظمة المحاكم</h3>
+                                <div class="enter">
+                                    <a href="#">دخول للنظام</a>
+                                </div>
+                            </div>
+                            <div class="system">
+                                <img src="assets/images/sys-2.svg" alt="Image">
+                                <h3>أنظمة التوثيق</h3>
+                                <div class="enter">
+                                    <a href="#">دخول للنظام</a>
+                                </div>
+                            </div>
+                            <div class="system">
+                                <img src="assets/images/sys-3.svg" alt="Image">
+                                <h3>أنظمة تجربة المستفيد</h3>
+                                <div class="enter">
+                                    <a href="#">دخول للنظام</a>
+                                </div>
+                            </div>
+                            <div class="more">
+                                <a href="#">
+                                    <h3>عرض المزيد</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="internal-communication">
+                        <div class="title">
+                            <img src="assets/images/internal-communication-icon.svg" alt="Image">
+                            <h2>التواصل الداخلي</h2>
+                        </div>
+                        <div class="slider">
+                            <div class="slides">
+                                <div class="slide active">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide"> 
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image1.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image1.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image1.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#">
+                                        <div class="slide-image">
+                                            <img src="assets/images/slide-image.jpg" alt="Image">
+                                            <p class="status">جديد</p>
+                                        </div>
+                                        <div class="slide-body">
+                                            <p><time datetime="2023-03-17">مارس 17, 2023</time></p>
+                                            <h3>وزارة العدل تحصل على شهادة واعي للتميز في مجال الأمن السيبراني</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- More slides can be added here -->
+                            </div>
+                            <div class="pagination"></div>
+                        </div>
+                    </section>
+                    
+                </div>
+                <div class="left-side">
+                    <section class="notifications">
+                        <div class="items">
+                            <div class="item">
+                                <a href="#">
+                                    <div class="counter">
+                                        <h3>3</h3>
+                                        <p>طلباتي الفعالة</p>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="assets/images/item1.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="counter">
+                                        <h3>3</h3>
+                                        <p>بلاغاتي المفتوحة</p>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="assets/images/item2.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="counter">
+                                        <h3>3</h3>
+                                        <p>بإنتظار الموافقة</p>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="assets/images/item3.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="counter">
+                                        <h3>3</h3>
+                                        <p>مهماتي</p>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="assets/images/item4.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="counter">
+                                        <h3>3</h3>
+                                        <p>إستبيانات متاحه</p>
+                                    </div>
+                                    <div class="icon">
+                                        <img src="assets/images/item5.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="user-systems">
+                        <div class="items">
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/f-print.svg" alt="Image">
+                                        <h3>نظام البصمة</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/messages.svg" alt="Image">
+                                        <h3>مراسلات</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/email.svg" alt="Image">
+                                        <h3>البريد الإلكتروني</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/email.svg" alt="Image">
+                                        <h3>البريد الإلكتروني</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/digi.svg" alt="Image">
+                                        <h3>الحوكمة الرقمية</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/digi.svg" alt="Image">
+                                        <h3>الحوكمة الرقمية 2</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/digi.svg" alt="Image">
+                                        <h3>الحوكمة الرقمية 3</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/digi.svg" alt="Image">
+                                        <h3>الحوكمة الرقمية 4</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sys-img-name">
+                                        <img src="assets/images/digi.svg" alt="Image">
+                                        <h3>الحوكمة الرقمية 5</h3>
+                                    </div>
+                                    <div class="link">
+                                        <img src="assets/images/arrow-left-y.svg" alt="Image">
+                                    </div>
+                                </a>
+                            </div>   
+                            <button class="toggle-button">
+                                <span>عرض المزيد</span>
+                            </button>
+                         
+                        </div>
+                    </section>
+
+                    <section class="what-coming">
+                        <div class="title">
+                            <h2>الأحداث القادمة</h2>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <div class="date">
+                                    <p class="month">مايو</p>
+                                    <p class="day">12</p>
+                                </div>
+                                <div class="text">
+                                    <h3>عرض دليل التوظيف</h3>
+                                    <p>مايكروسوفت تيم</p>
+                                    <div class="add-to-calendar">
+                                        <a href="#">
+                                            <img src="assets/images/calendar.svg" alt="Image">
+                                            <p>إضافة إلى تقويمي</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                    <img src="assets/images/arrow-left-g.svg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="date">
+                                    <p class="month">مايو</p>
+                                    <p class="day">12</p>
+                                </div>
+                                <div class="text">
+                                    <h3>عرض دليل التوظيف</h3>
+                                    <p>مايكروسوفت تيم</p>
+                                    <div class="add-to-calendar">
+                                        <a href="#">
+                                            <img src="assets/images/calendar.svg" alt="Image">
+                                            <p>إضافة إلى تقويمي</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                    <img src="assets/images/arrow-left-g.svg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="date">
+                                    <p class="month">مايو</p>
+                                    <p class="day">12</p>
+                                </div>
+                                <div class="text">
+                                    <h3>عرض دليل التوظيف</h3>
+                                    <p>مايكروسوفت تيم</p>
+                                    <div class="add-to-calendar">
+                                        <a href="#">
+                                            <img src="assets/images/calendar.svg" alt="Image">
+                                            <p>إضافة إلى تقويمي</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                    <img src="assets/images/arrow-left-g.svg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="date">
+                                    <p class="month">مايو</p>
+                                    <p class="day">12</p>
+                                </div>
+                                <div class="text">
+                                    <h3>عرض دليل التوظيف</h3>
+                                    <p>مايكروسوفت تيم</p>
+                                    <div class="add-to-calendar">
+                                        <a href="#">
+                                            <img src="assets/images/calendar.svg" alt="Image">
+                                            <p>إضافة إلى تقويمي</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                    <img src="assets/images/arrow-left-g.svg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="date">
+                                    <p class="month">مايو</p>
+                                    <p class="day">12</p>
+                                </div>
+                                <div class="text">
+                                    <h3>عرض دليل التوظيف</h3>
+                                    <p>مايكروسوفت تيم</p>
+                                    <div class="add-to-calendar">
+                                        <a href="#">
+                                            <img src="assets/images/calendar.svg" alt="Image">
+                                            <p>إضافة إلى تقويمي</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                    <img src="assets/images/arrow-left-g.svg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="date">
+                                    <p class="month">مايو</p>
+                                    <p class="day">12</p>
+                                </div>
+                                <div class="text">
+                                    <h3>عرض دليل التوظيف</h3>
+                                    <p>مايكروسوفت تيم</p>
+                                    <div class="add-to-calendar">
+                                        <a href="#">
+                                            <img src="assets/images/calendar.svg" alt="Image">
+                                            <p>إضافة إلى تقويمي</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="link">
+                                    <img src="assets/images/arrow-left-g.svg" alt="Image">
+                                </div>
+                            </div>
+                            <!-- Add more items as needed -->
+                            <button class="toggle-button">
+                                <span>عرض المزيد</span>
+                            </button>
+                        </div>
+                    </section>
+                    
+                    <section class="magazines">
+                        <div class="items">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/magazine1.svg" alt="Image">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/magazine2.svg" alt="Image">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#">الأسئلة المتكررة</a>
+                </li>
+                <li>
+                    <a href="#">سياسةالخصوصية</a>
+                </li>
+                <li>
+                    <a href="#">شروط الاستخدام</a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة © 2023</p>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
